@@ -47,8 +47,10 @@ public class WebServiceConfig {
         return definition;
     }
 
+    //we will use schema and generate wsdl using spring webservice (courses.wsdl)
     @Bean
     public XsdSchema courseSchema() {
+        // this takes path
         return new SimpleXsdSchema(new ClassPathResource("course-details.xsd"));
     }
 }
